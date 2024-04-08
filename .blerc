@@ -1,0 +1,76 @@
+# blerc
+
+# If ble/contrib/integration/fzf cannot find the fzf directory, please set the
+# following variable "_ble_contrib_fzf_base" manually.  The value
+# "/path/to/fzf-directory" should be replaced by a path to the fzf directory
+# such as "$HOME/.fzf" or "/usr/share/fzf" that contain
+# "shell/{completion,key-bindings}.bash" or "{completion,key-bindings}.bash".
+
+#_ble_contrib_fzf_base=/path/to/fzf-directory
+
+
+# Note: If you would like to combine fzf-completion with bash_completion, you
+# need to load bash_completion earlier than fzf-completion.
+
+#source /path/to/bash_completion.sh
+
+
+# Setup fzf
+ble-import -d integration/fzf-completion
+ble-import -d integration/fzf-key-bindings
+
+# Options
+bleopt complete_auto_complete=
+bleopt complete_auto_history=
+bleopt complete_ambiguous=
+bleopt complete_menu_filter=
+bleopt complete_contract_function_names=
+complete -r
+bleopt exec_errexit_mark=
+bleopt prompt_eol_mark=
+bleopt exec_errexit_mark=
+bleopt exec_elapsed_mark=
+bleopt exec_elapsed_enabled=
+bleopt edit_abell=
+bleopt edit_vbell=
+
+# Colors
+ble-face command_builtin=fg=green
+ble-face command_builtin_dot=fg=green,bold
+ble-face command_directory=fg=green,underline
+ble-face command_file=fg=green
+ble-face command_function=fg=green
+ble-face command_jobs=fg=green,bold
+ble-face command_keyword=fg=green
+ble-face disabled=fg=242
+ble-face filename_directory=fg=blue,bold
+ble-face filename_executable=fg=magenta
+ble-face filename_other=fg=white
+ble-face overwrite_mode=fg=green
+ble-face syntax_brace=fg=blue,bold
+ble-face syntax_command=fg=green
+ble-face syntax_comment=fg=black,bold
+ble-face syntax_delimiter=fg=green
+ble-face syntax_document=fg=green
+ble-face syntax_document_begin=fg=green,bold
+ble-face syntax_error=fg=red
+ble-face syntax_escape=fg=green
+ble-face syntax_expr=fg=green
+ble-face syntax_function_name=fg=green
+ble-face syntax_param_expansion=fg=cyan
+ble-face syntax_quotation=fg=yellow
+ble-face syntax_quoted=fg=yellow
+ble-face syntax_varname=fg=green
+ble-face varname_array=fg=white,bold
+ble-face varname_empty=fg=white
+ble-face varname_export=fg=cyan
+ble-face varname_expr=fg=cyan
+ble-face varname_hash=fg=cyan
+ble-face varname_number=fg=white
+ble-face varname_readonly=fg=white,bold
+ble-face varname_transform=fg=white,bold
+ble-face varname_unset=fg=white
+ble-face vbell=fg=red
+ble-face vbell_erase=fg=red,bg=white
+ble-face vbell_flash=fg=red,bg=white
+ble-face command_alias=fg=green
