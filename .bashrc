@@ -41,7 +41,8 @@ gtp() {
 
 # Function to display git diff with delta
 gd() {
-  git diff "$@" | delta -s --navigate --wrap-max-lines 2 --pager bat
+    diff_output=$(git diff "$@")
+    if [ -n "$diff_output" ]; then echo "$diff_output" | delta -s --navigate --wrap-max-lines 2 --pager bat; fi
 }
 
 # Function to add files to git
