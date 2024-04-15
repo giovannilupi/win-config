@@ -1,0 +1,86 @@
+{
+  "custom-layouts": [
+    {
+      "uuid": "{82914E7B-2B7F-46B5-BF70-36977EB46388}",
+      "name": "Vertical2",
+      "type": "grid",
+      "info": {
+        "rows": 1,
+        "columns": 2,
+        "rows-percentage": [
+          10000
+        ],
+        "columns-percentage": [
+          5000,
+          5000
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
+          ]
+        ],
+        "show-spacing": false,
+        "spacing": 0,
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{F5A1FADD-A54C-4C39-A77F-FACBE2091C05}",
+      "name": "Horizontal2",
+      "type": "grid",
+      "info": {
+        "rows": 2,
+        "columns": 1,
+        "rows-percentage": [
+          4997,
+          5003
+        ],
+        "columns-percentage": [
+          10000
+        ],
+        "cell-child-map": [
+          [
+            0
+          ],
+          [
+            1
+          ]
+        ],
+        "show-spacing": false,
+        "spacing": 0,
+        "sensitivity-radius": 20
+      }
+    },
+    {
+      "uuid": "{5BD11AC0-1F5C-4727-AC5F-AD642BA06B0A}",
+      "name": "Vertical3",
+      "type": "grid",
+      "info": {
+        "rows": 2,
+        "columns": 2,
+        "rows-percentage": [
+          4998,
+          5002
+        ],
+        "columns-percentage": [
+          5000,
+          5000
+        ],
+        "cell-child-map": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "show-spacing": false,
+        "spacing": 0,
+        "sensitivity-radius": 20
+      }
+    }
+  ]
+}

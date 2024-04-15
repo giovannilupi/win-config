@@ -3,7 +3,5 @@
   "ReplaceWinR": false,
   "LeaveShellOpen": false,
   "RunAsAdministrator": false,
-  "Count": {
-    "jmp": 1
-  }
+  "Count": {}
 }
