@@ -103,6 +103,7 @@ PowerToys is a set of utilities that enhance the functionality of Windows, allow
 - [`Always On Top`](https://learn.microsoft.com/en-us/windows/powertoys/always-on-top): pin a window on top of others
 - [`PowerToys Awake`](https://learn.microsoft.com/en-us/windows/powertoys/awake): keep computer awake
 - [`Environment Variables`](https://learn.microsoft.com/en-us/windows/powertoys/environment-variables): easier environment variables management
+- [`FancyZones`](https://learn.microsoft.com/en-us/windows/powertoys/fancyzones): window manager supporting static layouts
 - [`Keyboard Manager`](https://learn.microsoft.com/en-us/windows/powertoys/keyboard-manager): redefine keys on your keyboard
 - [`Paste As Plain Text`](https://learn.microsoft.com/en-us/windows/powertoys/paste-as-plain-text): paste text excluding formatting using a custom keyboard shortcut
 - [`Peek`](https://learn.microsoft.com/en-us/windows/powertoys/peek): preview files directly in in File Explorer
@@ -142,16 +143,21 @@ In my `.bashrc`, I've included several aliases and functions tailored to my work
 
 Lastly, while acknowledging its substantial size and impact on shell boot time, I've integrated [`ble.sh`](https://github.com/akinomyoga/ble.sh) as my command-line editor. I particularly enjoy two key features: syntax highlighting and tab cycling through options. While I've disabled numerous features through the `.blerc` configuration file, some remain unavoidable. Moreover, disabling these features does not diminish the time necessary to source the program. Although `ble.sh` occasionally generates additional output and slows down prompt loading, the trade-off remains acceptable to me. Your decision to include `ble.sh` in your configuration should be based on your valuation of its benefits weighed against its impact on performance.
 
+### Terminal
+
+The Git Bash package includes a terminal emulator called [mintty](http://mintty.github.io/), which, although functional, looks quite outdated and offers very limited customization options. Fortunately, Git Bash can be used with other terminal emulators, and my preferred choice on Windows is [Windows Terminal](https://aka.ms/terminal). This terminal is developed by Microsoft, it is regularly updated, it integrates perfectly with the operating system, and it offers extensive customization capabilities. To add Git Bash as default shell in Windows Terminal, I recommend [this](https://www.commandlinewizardry.com/post/how-to-add-git-bash-to-windows-terminal) guide.
+
+I've included the settings file for my Windows Terminal in this repository. While I typically use the [MesloLGS NF](https://github.com/romkatv/powerlevel10k/blob/master/font.md) font for my terminal, I've found that it sometimes displays incorrectly with a [Powerlevel9k](https://github.com/Powerlevel9k/powerlevel9k) theme I use on my VM. As a workaround, I use the [MesloLGS Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo/S) instead. You may want to experiment with both fonts to determine which one works best for your setup.
+
 ### Visual Studio Code
  
-As editor font, I am using [FiraCode](https://github.com/tonsky/FiraCode) with ligatures enabled. To maintain coherency with my terminal, I use [MesloLGS NF](https://github.com/romkatv/powerlevel10k/blob/master/font.md) as font for the VSCode integrated terminal. I use Git Bash as the default shell for the integrated terminal. To accommodate this choice, I've adjusted the path separator to '/' when copying relative paths. Additionally, I've configured a few more settings to enable image display within the integrated terminal. Here are some relevant snippets from my `settings.json` file:
+As editor font, I am using [FiraCode](https://github.com/tonsky/FiraCode) with ligatures enabled. To maintain coherency with my terminal, I use [MesloLGS Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo/S) as font for the VSCode integrated terminal. I use Git Bash as the default shell for the integrated terminal. To accommodate this choice, I've adjusted the path separator to '/' when copying relative paths. Additionally, I've configured a few more settings to enable image display within the integrated terminal. Here are some relevant snippets from my `settings.json` file:
 ```
-    "terminal.integrated.fontFamily": "MesloLGS NF",
+    "terminal.integrated.fontFamily": "MesloLGS Nerd Font",
     "terminal.integrated.fontSize": 15,
     "editor.fontSize": 15,
     "terminal.integrated.gpuAcceleration": "canvas",
     "terminal.integrated.enableImages": true,
-    "editor.inlayHints.fontFamily": "MesloLGS NF",
     "editor.fontFamily": "fira code",
     "editor.fontLigatures": true,
     "terminal.integrated.defaultProfile.windows": "Git Bash",
@@ -175,7 +181,11 @@ I use Sublime as alternative code editor (mainly for scripting) and for note tak
     "gruvbox_tabs_xxs": true,
     "gruvbox_statusbar_xxs": true,
 ```
- 
+
+### Notepad++
+
+In Notepad++, I am using the "Gruvbox Dark Medium" theme from [this](https://github.com/wburton95/Notepadpp-Gruvbox-Port) repository. To use it, download the xml file for it from the repository and move into the themes directory of Notepad++. After that, you can apply the theme from the program settings. In the settings, I also adjusted the Dark Mode to "Follow Windows", set the Toolbar to "Filled FluentUI: Small", and changed the font to [FiraCode](https://github.com/tonsky/FiraCode).
+
 ### Google Chrome
  
 Google Chrome is my default browser, primarily due to its compatibility with several services I utilize. However, if you don't have these specific requirements, I'd recommend Firefox as an alternative. To visually integrate with my setup, I am using [this](hthttps://chromewebstore.google.com/detail/gruvbox-theme/ihennfdbghdiflogeancnalflhgmanop) gruvbox theme. As browsing extensions, I am using uBlock Origin, Windows Accounts, and Adobe Acrobat.
