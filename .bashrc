@@ -15,7 +15,11 @@ alias cat="bat -p -P"
 alias ls="eza --icons --group-directories-first"
 alias ll="eza --long --icons --group-directories-first"
 alias la="eza --long --icons --group-directories-first -a"
-alias subl="/c/Program\ Files/Sublime\ Text/sublime_text.exe"
+
+# Function to open a file in Sublime Text
+subl() {
+    (/c/Program\ Files/Sublime\ Text/sublime_text.exe "$@" &)
+}
 
 # Function to jump to a directory
 jmp() {
